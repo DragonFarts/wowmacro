@@ -33,8 +33,7 @@ Player/Target/Focus
 
 Arena1/Arena2/Arena3
 
-/run local a = UnitHealth("arena1"); b = UnitHealth("arena2"); c = UnitHealth("arena3"); local l; if a < b and a < c then l = "arena1" elseif b < a and b < c then l = "arena2" else l = "arena3" end; SendChatMessage(l .. " has the highest health.", "SAY");
-
+/run local a = UnitHealth("arena1"); b = UnitHealth("arena2"); c = UnitHealth("arena3"); local l; if a < b and a < c then l = "arena1" elseif b < a and b < c then l = "arena2" else l = "arena3" end; SendChatMessage(l .. " has the lowest health.", "SAY")
 
 ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 
