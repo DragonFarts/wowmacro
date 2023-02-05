@@ -1,0 +1,11 @@
+/run local a = UnitHealth("player"); b = UnitHealth("target"); local l; if a < b then l = "t"; else l = "s"; end; SendChatMessage(l, "SAY");
+
+
+
+
+
+/run local a = UnitHealth("arena1"); b = UnitHealth("arena2"); local l; if a < b then l = "a2"; else l = "a1"; end; SendChatMessage(l, "SAY");
+
+
+
+/run local a = UnitHealth("player"); b = UnitHealth("target"); c = UnitHealth("focus"); local l; if a > b and a > c then l = "player" elseif b > a and b > c then l = "target" else l = "focus" end; SendChatMessage(l .. " has the highest health.", "SAY");
