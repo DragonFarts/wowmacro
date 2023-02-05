@@ -6,6 +6,10 @@ Player/Target
 
 /run local a = UnitHealth("player"); b = UnitHealth("target"); local l; if a < b then l = "t"; else l = "s"; end; SendChatMessage(l, "SAY");
 
+~~with UnitClass~~
+
+/run local a,L=UnitHealth("player"),UnitHealth("target"),"player";if b<a then L,a="target",b end;SendChatMessage(L.."(LowHP)"..a.." is "..UnitClass(L)..".","SAY")
+
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Arena1/Arena2
@@ -20,6 +24,10 @@ Comparing 3 HP Pools  for lowest health
 Player/Target/Focus
 
 /run local a = UnitHealth("player"); b = UnitHealth("target"); c = UnitHealth("focus"); local l; if a < b and a < c then l = "player" elseif b < a and b < c then l = "target" else l = "focus" end; SendChatMessage(l .. " has the lowest health.", "SAY");
+
+~~with UnitClass~~
+
+/run local a,b,c,L=UnitHealth("player"),UnitHealth("target"),UnitHealth("focus"),"player";if b<a and b<c then L,a="target",b;elseif c<a and c<b then L,a="focus",c end;SendChatMessage(L.."(LowHP)"..a.." is "..UnitClass(L)..".","SAY")
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
