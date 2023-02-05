@@ -4,7 +4,7 @@ Comparing 2 HP Pools for lowest health
 
 Player/Target
 
-/run local a = UnitHealth("player"); b = UnitHealth("target"); local l; if a < b then l = "t"; else l = "s"; end; SendChatMessage(l, "SAY");
+/run local a = UnitHealth("player"); b = UnitHealth("target"); local l; if a < b then l = "self has LowHP"; else l = "target has LowHP"; end; SendChatMessage(l, "SAY");
 
 ~~with UnitClass~~
 
@@ -14,7 +14,7 @@ Player/Target
 
 Arena1/Arena2
 
-/run local a = UnitHealth("arena1"); b = UnitHealth("arena2"); local l; if a < b then l = "a2"; else l = "a1"; end; SendChatMessage(l, "SAY");
+/run local a = UnitHealth("arena1"); b = UnitHealth("arena2"); local l; if a < b then l = "Arena1 has Lowest HP"; else l = "Arena2 has Lowest HP"; end; SendChatMessage(l, "SAY");
 
 ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 
