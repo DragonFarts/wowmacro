@@ -16,6 +16,11 @@ Arena1/Arena2
 
 /run local a = UnitHealth("arena1"); b = UnitHealth("arena2"); local l; if a < b then l = "Arena1 has Lowest HP"; else l = "Arena2 has Lowest HP"; end; SendChatMessage(l, "SAY");
 
+with HP displayed
+
+/run local a = UnitHealth("arena1"); b = UnitHealth("arena2"); local l; if a < b then l = "Arena1 (HP: " .. a .. ") has Lowest HP"; else l = "Arena2 (HP: " .. b .. ") has Lowest HP"; end; SendChatMessage(l, "SAY");
+
+
 ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 
 Comparing 3 HP Pools  for lowest health
@@ -34,6 +39,10 @@ Player/Target/Focus
 Arena1/Arena2/Arena3
 
 /run local a = UnitHealth("arena1"); b = UnitHealth("arena2"); c = UnitHealth("arena3"); local l; if a < b and a < c then l = "arena1" elseif b < a and b < c then l = "arena2" else l = "arena3" end; SendChatMessage(l .. " has the lowest health.", "SAY")
+
+with HP displayed
+
+/run local a = UnitHealth("arena1"); b = UnitHealth("arena2"); c = UnitHealth("arena3"); local l; if a < b and a < c then l = "arena1 (HP: " .. a .. ")"; elseif b < a and b < c then l = "arena2 (HP: " .. b .. ")"; else l = "arena3 (HP: " .. c .. ")"; end; SendChatMessage(l .. " has the lowest health.", "SAY");
 
 ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 
